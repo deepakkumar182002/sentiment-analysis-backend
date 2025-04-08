@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: flask-backend
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: ""
+    startCommand: gunicorn app:app
+    rootDir: server
+    envVars:
+      - key: FLASK_ENV
+        value: production
